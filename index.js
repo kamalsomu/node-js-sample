@@ -3,6 +3,7 @@ var app = express()
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
+app.use(express.json())
 
 app.get('/', function(request, response) {
   response.send('Hello World.. From kamal somu!')
@@ -10,7 +11,8 @@ app.get('/', function(request, response) {
 
 // Route that receives a POST request to /sms
 app.post('/scan/pullrequest', function (req, res) {
-   res.send('vijay is super star');
+  // res.send('vijay is super star');
+   res.json({requestBody: req.body})  // <==== req.body will be a parsed JSON object
 
 })
 
