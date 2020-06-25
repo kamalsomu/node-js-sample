@@ -8,6 +8,14 @@ app.get('/', function(request, response) {
   response.send('Hello World.. From kamal somu!')
 })
 
+// Route that receives a POST request to /sms
+app.post('/scan/pullrequest', function (req, res) {
+   res.send('vijay is super star');
+
+})
+
+
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
