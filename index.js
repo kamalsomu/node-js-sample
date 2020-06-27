@@ -12,6 +12,7 @@ app.get('/', function(request, response) {
 // Route that receives a POST request to /sms
 app.post('/scan/pullrequest', function (req, res) {
   // res.send('vijay is super star');
+  console.log('req.body==='+req.body);
    res.json({requestBody: req.body})  // <==== req.body will be a parsed JSON object
 
 })
